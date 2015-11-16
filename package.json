@@ -1,0 +1,41 @@
+{
+  "name": "cfn-api-gateway-method",
+  "version": "0.1.0",
+  "description": "Custom::ApiGatewayMethod | AWS CloudFormation Custom Lambda Resource | API Gateway Method",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/istanbul/lib/cli cover ./node_modules/mocha/bin/_mocha",
+    "cfn-lambda-deploy": "chmod +x ./node_modules/cfn-lambda/deploy.sh && ./node_modules/cfn-lambda/deploy.sh;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrew-templeton/cfn-api-gateway-method.git"
+  },
+  "keywords": [
+    "aws",
+    "cloudformation",
+    "lambda",
+    "backed",
+    "custom",
+    "resource",
+    "api",
+    "gateway",
+    "method",
+    "rest",
+    "api",
+    "APIG"
+  ],
+  "author": "Andrew Templeton <andrw.tmplton@gmail.com> (https://github.com/andrew-templeton)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrew-templeton/cfn-api-gateway-method/issues"
+  },
+  "homepage": "https://github.com/andrew-templeton/cfn-api-gateway-method#readme",
+  "dependencies": {
+    "cfn-lambda": "0.5.2"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.0",
+    "mocha": "^2.3.3"
+  }
+}
