@@ -20,7 +20,7 @@ This Lambda makes use of the Lambda-Backed CloudFormation Custom Resource flow m
   See [`./example.template.json`](./example.template.json) for a sample CloudFormation template. The example uses `Condition` statements, `Parameters`, and dynamic `ServiceToken` generation fully.
 
 
-    "ApiLogicalIdInResourcesObject": {
+    "MethodLogicalIdInResourcesObject": {
       "Type": "Type": "Custom::ApiGatewayMethod",
       "Properties": {
         "ServiceToken": "arn:aws:lambda:<cfn-region-id>:<your-account-id>:function:<this-deployed-lambda-name>",
