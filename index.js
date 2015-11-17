@@ -12,8 +12,8 @@ var Upsert = CfnLambda.SDKAlias({
     'ApiKeyRequired',
     'RequestParameters.*'
   ],
-  returnPhysicalId: function(data) {
-    return [data.restApiId, data.resourceId, data.httpMethod].join(':');
+  returnPhysicalId: function(data, params) {
+    return [params.RestApiId, params.ResourceId, params.HttpMethod].join(':');
   }
 });
 

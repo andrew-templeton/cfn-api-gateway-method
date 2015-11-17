@@ -4,7 +4,7 @@
   "Parameters": {
     "RestApiCustomResourceLambdaName": {
       "Type": "String",
-      "Default": "CfnLambdaResource-cfn-api-gateway-restapi-0-3-2",
+      "Default": "CfnLambdaResource-cfn-api-gateway-restapi-0-4-0",
       "Description": "The name of the ApiGatewayRestApi Lambda you deployed to test this stack."
     },
     "RestApiName": {
@@ -21,7 +21,7 @@
     },
     "MethodCustomResourceLambdaName": {
       "Type": "String",
-      "Default": "CfnLambdaResource-cfn-api-gateway-method-0-1-3",
+      "Default": "CfnLambdaResource-cfn-api-gateway-method-0-2-0",
       "Description": "The name of the ApiGatewayMethod Lambda you deployed to test this stack."
     },
     "MethodAuthorizationType": {
