@@ -1,6 +1,5 @@
 
 var AWS = require('aws-sdk');
-
 var CfnLambda = require('cfn-lambda');
 
 var APIG = new AWS.APIGateway({apiVersion: '2015-07-09'});
