@@ -26,7 +26,31 @@ var Delete = CfnLambda.SDKAlias({
 });
 
 exports.handler = CfnLambda({
-  Create: Upsert,
+  Create: function(params, reply) {
+    var methodSignature = {
+      httpMethod: params.HttpMethod,
+      resourceId: params.ResourceId,
+      restApiId: params.RestApiId
+    };
+    Upsert(params, function(createError, physicalId) {
+      if (createError) {
+        console.log('Create call threw and exception: %s', createError);
+        return reply(createError);
+      }
+      wait();
+      function wait() {
+        APIG.getMethod(methodSignature, function(err, data) {
+          if (err && err.statusCode === 404) {
+            return wait();
+          }
+          if (err) {
+            return reply('Error while waiting for creation to complete!');
+          }
+          return reply(null, physicalId);
+        });
+      }
+    });
+  },
   Update: Upsert,
   Delete: Delete,
   SchemaPath: [__dirname, 'schema.json']
